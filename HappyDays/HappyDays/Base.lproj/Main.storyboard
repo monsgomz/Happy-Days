@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24128" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bzc-W1-bjN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24128" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DiU-ba-ATt">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
@@ -29,6 +29,9 @@
                                         <rect key="frame" x="0.0" y="41.333333333333314" width="343" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Continuar"/>
+                                        <connections>
+                                            <action selector="requestPermissions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wkh-EF-zN0"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -42,6 +45,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Gwz-km-Xjd"/>
+                    <connections>
+                        <outlet property="helpLabel" destination="JF1-vv-yyf" id="ll7-w1-NRf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -50,7 +56,7 @@
         <!--Navigation Controller-->
         <scene sceneID="3h2-ef-M9k">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bzc-W1-bjN" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="FirstRun" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Bzc-W1-bjN" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4tj-gL-3gU">
                         <rect key="frame" x="0.0" y="118" width="393" height="54"/>
@@ -65,10 +71,10 @@
             </objects>
             <point key="canvasLocation" x="136.64122137404578" y="136.61971830985917"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Memories View Controller-->
         <scene sceneID="dP5-7r-ZfU">
             <objects>
-                <collectionViewController id="FHm-rX-gUM" sceneMemberID="viewController">
+                <collectionViewController id="FHm-rX-gUM" customClass="MemoriesViewController" customModule="HappyDays" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="148-BA-64Y">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,7 +90,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Vja-nU-Ylk">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Memory" id="Vja-nU-Ylk" customClass="MemorieCellCollectionViewCell" customModule="HappyDays" customModuleProvider="target">
                                 <rect key="frame" x="96.666666666666671" y="50" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="s1M-J7-HAA">
@@ -93,7 +99,7 @@
                                 </collectionViewCellContentView>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="myT-KA-uFX">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="Header" id="myT-KA-uFX">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
@@ -108,7 +114,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
-                                        <outlet property="delegate" destination="FHm-rX-gUM" id="pMb-4Q-8Vh"/>
+                                        <outlet property="delegate" destination="FHm-rX-gUM" id="uxS-xV-xg4"/>
                                     </connections>
                                 </searchBar>
                             </subviews>
@@ -119,6 +125,9 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="wDi-MW-SGI"/>
+                    <connections>
+                        <outlet property="imageView" destination="h7h-iI-TPF" id="2fF-7P-drK"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AdN-9F-MKa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
