@@ -148,6 +148,9 @@
 				DEVELOPMENT_TEAM = 3F7K3Z48QL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HappyDays/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Usamos esto para grabar tu lectura";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Usamos esto para acceder a tu galeria";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Usamos esto para transcribir lo que lees";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -180,6 +183,9 @@
 				DEVELOPMENT_TEAM = 3F7K3Z48QL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HappyDays/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Usamos esto para grabar tu lectura";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Usamos esto para acceder a tu galeria";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Usamos esto para transcribir lo que lees";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
