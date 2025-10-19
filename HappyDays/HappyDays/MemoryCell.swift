@@ -7,6 +7,8 @@
 
 import UIKit
 
-class MemorieCellCollectionViewCell: UICollectionViewCell {
+class MemoryCell: UICollectionViewCell {
     
+	@IBOutlet var imageView: UIImageView!
+	
 }
